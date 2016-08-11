@@ -1,0 +1,21 @@
+<div ng-controller="ArticleCtrl">
+  <div class="jumbotron">
+    <h1></h1>
+    <p>Article</p>
+  </div>
+  <div class="container row">
+    <div ng-repeat="atl in atls" class="col-md-3 row" style="cursor:pointer;margin:10px;border:1px solid;padding-top:0px;padding:10px;">
+      <div class="col-md-12" ><h3>{{atl.name}}</h3></div>
+      <div class="col-md-12" >{{atl.description}}</div>
+      <div class="col-md-12" ><br/></div>
+      <div class="col-md-12" ><img src="/images/{{atl.picture}}" width="200px" /></div>
+      <div class="col-md-12"><h4>{{atl.price}} Euros</h4></div>
+      <div class="col-md-2 col-md-offset-4">
+        <button type="button" ng-click="addCart(atl.id)" class="btn btn-info">
+          <span class="glyphicon glyphicon-plus"></span> Add in basket
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

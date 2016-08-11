@@ -1,0 +1,24 @@
+<div class="jumbotron">
+  <h1>Account</h1>
+  <p></p>
+</div>
+<div class="row" style="padding:10px;background-color:#F7F7F7;" ng-controller="AccountCtrl">
+  <div class="col-md-1">Name</div>
+  <input type="text" class="col-md-2"  ng-model="nameAccount" />
+  <div class="col-md-12"><br/></div>
+
+  <div class="col-md-1">Firstname</div>
+  <input type="text" class="col-md-2" ng-model="firstnameAccount" />
+  <div class="col-md-12"><br/></div>
+
+  <div class="col-md-1">Email</div>
+  <input type="text" class="col-md-2" ng-model="mailAccount" />
+  <div class="col-md-12"><br/></div>
+
+  <div class="col-md-1">Password</div>
+  <input type="password" class="col-md-2" ng-model="pwdAccount" />
+  <div class="col-md-12"><br/></div>
+
+
+  <div class="col-md-2 col-md-offset-2"><button class="btn btn-success" ng-click="updateAccount()">Valider</button> </div>
+</div>

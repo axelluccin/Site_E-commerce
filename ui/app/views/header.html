@@ -1,0 +1,27 @@
+<div class="navbar-header">
+  <a class="navbar-brand" href="#">LVD Shop</a>
+</div>
+<div id="navbar" class="navbar-collapse collapse" ng-controller="TypeCtrl">
+  <ul class="nav navbar-nav" >
+    <li ng-class="{ 'active': $index == selectedIndex }" ng-click="itemClicked($index)">
+      <a href="#">Home</a>
+    </li>
+    <li ng-class="{ 'active': $index == selectedIndex }" ng-click="itemClicked($index)"
+        ng-repeat="type in types">
+      <a href="/#/category/all/{{type.id}}">{{ type.name }}</a>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right">
+    <li style="display:{{con}};"><a class="btn" href="/#/login">Login</a></li>
+    <li class="dropdown" style="display:{{login}};">
+      <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{user.firstname}} {{user.name}} <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="/#/account/{{idUser}}">My account</a></li>
+        <li><a href="#/cart/get/archive/{{idUser}}">My orders</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#/login" ng-click="deleteSession()">Logout</a></li>
+      </ul>
+    </li>
+    <li><a href="/#/cart/1"><span class="glyphicon glyphicon-shopping-cart" ></span> {{ nbArticle }} items</a></li>
+  </ul>
+</div><!--/.nav-collapse -->

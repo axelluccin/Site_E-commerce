@@ -1,0 +1,22 @@
+<div ng-controller="CartCtrl">
+  <div class="jumbotron">
+    <h1></h1>
+    <p>My basket</p>
+  </div>
+  <div class="container row" style="cursor:pointer;margin:10px;">
+    <div class="col-md-12 row" style="padding-top:0px;padding:10px;" ng-repeat="atl in atls">
+        <div class="col-md-1" ><img src="/images/{{atl.picture}}" width="50px" /></div>
+        <div class="col-md-9" ><h4>{{atl.name}}</h4>{{atl.description}}</div>
+        <div class="col-md-1">{{mult[$index]}}X </div>
+        <div class="col-md-1">{{atl.price}} Euros</div>
+      </div>
+      <div class="col-md-12 row" style="padding-top:0px;padding:10px;background-color:#F7F7F7;">
+        <div class="col-md-3 col-md-offset-9" ><h3>TOTAL : {{ getTotal() }} euros</h3></div>
+      </div>
+      <div class="col-md-1 col-md-offset-10" style="padding-top:0px;padding:10px;">
+        <button class="btn btn-info" ng-click="acceptCart()">Confirm your basket</button>
+      </div>
+    </div>
+  </div>
+</div>
+

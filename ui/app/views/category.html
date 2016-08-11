@@ -1,0 +1,13 @@
+<div ng-controller="CategoryCtrl">
+  <div class="jumbotron">
+    <h2>{{type.name}}</h2>
+    <p></p>
+  </div>
+  <div class="container row">
+    <div ng-repeat="ctg in ctgs" class="col-md-3" style="cursor:pointer;margin:10px;border:1px solid;padding-top:0px;padding:10px;">
+      <a href="#/article/all/{{ctg.id}}"><h3>{{ctg.name}}</h3>{{ctg.description}}
+        <br/> <img src="/images/{{ctg.picture}}" width="250px" align="center"/>
+      </a>
+    </div>
+  </div>
+</div>
